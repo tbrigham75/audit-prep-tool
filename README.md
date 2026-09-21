@@ -4,18 +4,31 @@
 **Deployment model:** Self-contained local desktop web application  
 **Default launcher URL:** `http://127.0.0.1:51327/`
 
-Audit Prep Tool is a local-first workspace for preparing, organizing, reviewing, and exporting audit evidence. It is designed for teams that receive auditor requests and need a practical place to collect screenshots, document what each item proves, map evidence to controls, track PBC requests and findings, and produce a clean audit package.
+Audit Prep Tool is a local-first evidence workspace for audit, assessment, and compliance teams. It turns the scattered work of responding to an auditor—screenshots, request lists, control mappings, reviewer notes, findings, and exports—into a structured, reviewable audit package that stays on the user's machine by default.
+
+Use it when you need to answer a PBC (Provided By Client) list, prepare for SOC 2, CMMC, CIS, PCI DSS, ISO 27001, NIST, or internal security reviews, or simply organize technical evidence before an assessor asks for it. Each audit engagement has its own workspace, so evidence and review context do not mingle across clients, systems, or assessment periods.
+
+### What it helps you do
+
+- Collect and hash screenshot evidence, document what it proves, and track review status.
+- Map evidence to framework-neutral controls and auditor/PBC requests.
+- Track open findings, owners, remediation, and due dates alongside the supporting evidence.
+- Redact or annotate a screenshot while preserving the original and its lineage.
+- Export a manifest, printable report, backup, or auditor-facing ZIP package.
+- Optionally ask Ollama or an OpenAI-compatible service about the audit workspace, with screenshot sharing disabled unless explicitly enabled.
 
 The application is intentionally packaged without Docker, Node.js, Python, npm, a database server, or a separate web server requirement for end users. The supplied platform launchers embed the application and serve it only on loopback.
 
 ## Quick start
 
-Use the launcher for your operating system:
+Build or obtain the launcher for your operating system:
 
 - Windows 64-bit: `audit-prep-tool-windows-amd64.exe`
 - Linux 64-bit: `audit-prep-tool-linux-amd64`
 - macOS Intel: `audit-prep-tool-macos-amd64`
 - macOS Apple Silicon: `audit-prep-tool-macos-arm64`
+
+The source repository intentionally excludes compiled launchers. Build them using the commands in [Rebuilding launchers](#rebuilding-launchers), or obtain them from a verified release package when one is available.
 
 Keep the launcher process open while using the app. The launcher listens only on `127.0.0.1:51327` and opens the default browser.
 
