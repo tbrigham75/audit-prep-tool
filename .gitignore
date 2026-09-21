@@ -1,0 +1,33 @@
+# Local credentials and developer configuration
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+*.p12
+*.pfx
+secrets/
+
+# Editor and operating-system files
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Build, test, and release artifacts
+dist/
+build/
+coverage/
+test-results/
+*.zip
+audit-prep-tool-windows-amd64.exe
+audit-prep-tool-linux-amd64
+audit-prep-tool-macos-amd64
+audit-prep-tool-macos-arm64
+SHA256SUMS.txt
+RELEASE_TEST_REPORT.txt
+README.txt
